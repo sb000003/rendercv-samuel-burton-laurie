@@ -22,7 +22,7 @@ def make_given_keywords_bold_in_sections(
     """Iterate over the dictionary recursively and make the given keywords bold.
 
     Args:
-        sections_input: TODO
+        sections_input: The sections input as a Pydantic model.
         keywords: The keywords to make bold.
 
     Returns:
@@ -34,7 +34,9 @@ def make_given_keywords_bold_in_sections(
     for entries in sections_input.values():
         for i, entry in enumerate(entries):
             if isinstance(entry, str):
-                entries[i] = entry_types.make_keywords_bold_in_a_string(entry, keywords)
+                entries[i] = entry_types.make_keywords_bold_in_a_string(  # type: ignore
+                    entry, keywords
+                )
             elif callable(getattr(entry, "make_keywords_bold", None)):
                 entries[i] = entry.make_keywords_bold(keywords)  # type: ignore
 
@@ -68,18 +70,18 @@ def get_error_message_and_location_and_value_from_a_custom_error(
     return None, None, None
 
 
-def get_coordinates_of_a_key_in_a_yaml_file(
-    yaml_file_as_string: str, location: list[str]
+def get_coordinates_of_a_key_in_a_yaml_object(
+    yaml_object: ruamel.yaml.YAML, location: list[str]
 ) -> tuple[tuple[int, int], tuple[int, int]]:
-    """Find the coordinates of a key in a YAML file.
+    """Find the coordinates of a key in a YAML object.
 
     Args:
-        yaml_file_as_string: The YAML file as a string.
-        location: The location of the key in the YAML file. For example,
+        yaml_object: The YAML object.
+        location: The location of the key in the YAML object. For example,
             `['cv', 'sections', 'education', '0', 'degree']`.
 
     Returns:
-        The coordinates of the key in the YAML file in the format
+        The coordinates of the key in the YAML object in the format
         ((start_line, start_column), (end_line, end_column)).
         (Line and column numbers are 0-indexed.)
     """
@@ -90,12 +92,6 @@ def get_coordinates_of_a_key_in_a_yaml_file(
         # If the part is numeric, interpret it as a list index:
         try:
             index = int(location_key)
-            if not isinstance(yaml_object, list):
-                message = (
-                    f"Expected a list for index '{location_key}', but got"
-                    f" {type(yaml_object)}"
-                )
-                raise KeyError(message)
             try:
                 inner_yaml_object = yaml_object[index]
                 # Get the coordinates from the list's lc.data (which is a list of tuples).
@@ -107,12 +103,6 @@ def get_coordinates_of_a_key_in_a_yaml_file(
                 raise KeyError(message) from e
         except ValueError as e:
             # Otherwise, the part is a key in a mapping.
-            if not isinstance(yaml_object, CommentedMap):
-                message = (
-                    f"Expected a mapping for key '{location_key}', but got"
-                    f" {type(yaml_object)}"
-                )
-                raise KeyError(message) from e
             if location_key not in yaml_object:
                 message = f"Key '{location_key}' not found in the YAML file."
                 raise KeyError(message) from e
@@ -123,7 +113,7 @@ def get_coordinates_of_a_key_in_a_yaml_file(
 
         return inner_yaml_object, coordinates
 
-    current_yaml_object: CommentedMap = read_a_yaml_file(yaml_file_as_string)  # type: ignore
+    current_yaml_object: ruamel.yaml.YAML = yaml_object
     coordinates = ((0, 0), (0, 0))
     # start from the first key and move forward:
     for location_key in location:
@@ -146,6 +136,7 @@ def parse_validation_errors(
 
     Args:
         exception: The Pydantic validation error object.
+        yaml_file_as_string: The YAML file as a string.
 
     Returns:
         A list of error dictionaries that contain the error messages, locations, and the
@@ -278,8 +269,10 @@ def parse_validation_errors(
         }
 
         if yaml_file_as_string:
-            coordinates = get_coordinates_of_a_key_in_a_yaml_file(
-                yaml_file_as_string, list(new_error["loc"])
+            yaml_object = read_a_yaml_file(yaml_file_as_string)
+            coordinates = get_coordinates_of_a_key_in_a_yaml_object(
+                yaml_object,
+                list(new_error["loc"]),  # type: ignore
             )
             new_error["yaml_loc"] = coordinates
 

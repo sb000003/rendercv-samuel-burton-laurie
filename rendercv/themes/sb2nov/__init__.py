@@ -46,7 +46,7 @@ o.section_titles_font_family_field_info.default = "New Computer Modern"
 
 class SectionTitles(o.SectionTitles):
     font_family: o.FontFamily = o.section_titles_font_family_field_info
-    line_type: o.SectionTitleType = o.section_titles_type_field_info
+    type: o.SectionTitleType = o.section_titles_type_field_info
 
 
 o.highlights_bullet_field_info.default = "◦"

@@ -115,7 +115,6 @@ def create_a_sample_yaml_input_file(
         },
     )
     data_model_as_dictionary = json.loads(data_model_as_json)
-    data_model_as_dictionary["design"] = {"theme": theme}
 
     yaml_string = dictionary_to_yaml(data_model_as_dictionary)
 

@@ -22,6 +22,7 @@ Then, the tests should be implemented for the new social network with the follow
 We should add a new entry type if and only if the proposed design of the entry type cannot be achieved using any of the existing entry types. This is because RenderCV's entry types are not designed to function as data models. Their purpose is not to store specific data but rather to determine how a given set of strings will appear in the PDF.
 
 For example, JSON Resume follows a data-oriented approach. In JSON Resume, each entry type acts as a data model specifically designed to store structured information. RenderCV takes a design-oriented approach for two reasons:
+
 - There would be too many different data models that would ultimately look more or less the same in the PDF.
 - It would be impossible to provide all the different data models people might need.
 

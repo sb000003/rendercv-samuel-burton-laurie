@@ -15,7 +15,6 @@
 #let locale-catalog-last-updated-date-style = "<<locale.last_updated_date_template|replace_placeholders_with_actual_values(last_updated_date_template_placeholders)>>"
 #let locale-catalog-language = "<<locale.language>>"
 #let design-page-size = "<<design.page.size>>"
-#let design-section-titles-font-size = <<design.section_titles.font_size>>
 #let design-colors-text = <<design.colors.text.as_rgb()>>
 #let design-colors-section-titles = <<design.colors.section_titles.as_rgb()>>
 #let design-colors-last-updated-date-and-page-numbering = <<design.colors.last_updated_date_and_page_numbering.as_rgb()>>

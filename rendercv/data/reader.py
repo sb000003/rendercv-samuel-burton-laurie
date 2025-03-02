@@ -169,7 +169,9 @@ def parse_validation_errors(
         "Extra inputs are not permitted": (
             "This field is unknown for this object! Please remove it."
         ),
-        "Input should be a valid string": "This field should be a string!",
+        "Input should be a valid string": (
+            "This field should be provided or removed to use the default value!"
+        ),
         "Input should be a valid list": (
             "This field should contain a list of items but it doesn't!"
         ),

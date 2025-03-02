@@ -74,7 +74,7 @@ o.section_titles_font_family_field_info.default = "XCharter"
 
 class SectionTitles(o.SectionTitles):
     font_family: o.FontFamily = o.section_titles_font_family_field_info
-    line_type: o.SectionTitleType = o.section_titles_type_field_info
+    type: o.SectionTitleType = o.section_titles_type_field_info
     vertical_space_above: o.TypstDimension = (
         o.section_titles_vertical_space_above_field_info
     )

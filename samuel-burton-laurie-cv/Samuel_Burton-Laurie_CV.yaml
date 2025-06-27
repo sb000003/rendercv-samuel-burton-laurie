@@ -1,0 +1,127 @@
+cv:
+  name: Samuel Burton-Laurie
+  location: Nottingham
+  email: sam.burtonlaurie@hotmail.co.uk
+  phone: "+447946345287"
+  website:
+  social_networks:
+    - network: LinkedIn
+      username: samuel-burton-laurie-19317a1ba
+  sections:
+    Profile:
+      - Experienced software developer, with a BSc in Digital and Technology Solutions and 13 years’ experience in the industry across multiple sectors, including finance, government and sports betting. Taking on the senior role and (re)designing and implementing services from scratch. Passionate about software, I spend my free time working on projects at home.
+
+    Tools & Technologies:
+      - Kotlin, Java, Kubernetes, AWS Lambda, AWS Dynamo, AWS SNS, k6, Cucumber, JavaScript, Spring Boot, Jenkins, ArgoCD, Gradle, Maven, Git, Intellij IDE, MYSQL, Netty, Apache Solr, Apache Tomcat, Apache Kafka, RedHat JBOSS Wildfly, Ingres, Vagrant, Terraform, AWS CDK, Linux.
+    experience:
+      - company: Sky Betting & Gaming - Soccer Models
+        position: Software Engineer
+        date:
+        start_date: 2023-03
+        end_date: present
+        location: Leeds/Remote
+        summary:
+        highlights:
+          - Kotlin based, largely Spring Boot microservices deploying to Kubernetes using delivery platform ArgoCD. Utilising AWS services like Dynamo to store data, SNS for handling flows of data and Lambda to process that data. Also JavaScript development for Web based integrations to our backend services.
+          - Worked with Quantitative Analysts to provide pricing logic for their soccer platform in the first 2 years. This involved implementing mathematical models in Kotlin using statistical data from third party providers in order to provide pricing data to the front end Sky Bet mobile app/website as well as their in-house team of traders who manage fixtures, markets and selections with the data we provide.
+          - Designed & Implemented a platform for a multi-bet builder PCB (Packaged Created Bets), that is taking £120m+ in stakes.
+          - The system is a high throughput, low latency event driven one. Consuming 2000 messages/min and processing in 150ms.
+          - Recently working on a complete overhaul of the wider group’s infrastructure. Creating new services to replace old monolithic ones and provide a more stable and easy to modify platform.
+          - New event driven Kafka services load tested with k6 to consume 50000 messages/min.
+      - company: FINASTRA – Financial Messaging System
+        position: Java Developer
+        date:
+        start_date: 2021-07
+        end_date: 2023-03
+        location: Nottingham/Remote
+        summary:
+        highlights:
+          - Producing bug fixes for their Java web application. Creating high priority hot fix releases for their banking customers. Ensuring releases and deliverables were created and delivered on time.
+          - Working in an Agile environment and adhering to Agile principles and practices. Taking part in and providing constructive updates to daily scrums, sprint retrospectives and sprint planning. Using Jira for issue tracking and confluence for documentation. Also using Jenkins, Maven and SVN for a continuous integration pipeline allowing fast paced development, testing and delivery to customer test environments.
+          - Designing and implementing a spring boot REST microservice to run in a docker container.  I worked on re-designing an existing part of the application to run with spring boot to gather data from a no-SQL database and provide that back to the requestor using a REST API.
+      - company: ATOS – OPTICA Account (Police case working system)
+        position: Java Developer
+        date:
+        start_date: 2017-09
+        end_date: 2021-07
+        location: Nottingham/Remote
+        summary:
+        highlights:
+          - Developing Java/JSF changes to their JBOSS EAP hosted web application, using tools such as Maven, Git & Jenkins to ensure smooth transition between environments and pipelines.
+          - Maintaining a large suite of functional testing capability using cucumber software. Adhering to the BDD methodology to ensure requirements are met and automatically tested thoroughly.
+          - Working with MYSQL databases to gather information for the purposes of analysis. To ensure robust relationships between database and application.
+      - company: ATOS – Home Office account
+        position: 3rd Line Support Engineer
+        date:
+        start_date: 2013-09
+        end_date: 2017-09
+        location: Nottingham/Remote
+        summary:
+        highlights:
+          - Working in a 3rd line customer support environment.
+          - Using tools such as MSSQL, AWS cloud platform & Elastic ELK stack.
+          - Working in a high-pressure environment, to keep the clients’ system flowing as expected.
+
+    education:
+      - institution: University of Roehampton
+        area: Digital and Technology Solutions
+        degree: BSc (Hons) (Second class upper)
+        date:
+        start_date: 2017-07
+        end_date: 2020-07
+        location: Nottingham/London
+      - institution: Atos/QA
+        area: ICT Professionals - Systems & Principles
+        degree: Level 4 Diploma
+        date:
+        start_date: 2013-07
+        end_date: 2017-07
+        location: Nottingham
+    Interests and Hobbies:
+      - Football, gaming, reading and keeping fit. Into running at the moment. I take a general interest in web/mobile application development and have created a few websites and mobile gaming apps.
+    References:
+      - References available on request.
+design:
+  theme: sb2nov
+locale:
+  language: en
+  phone_number_format: national
+  page_numbering_template: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  last_updated_date_template: Last updated in TODAY
+  date_template: MONTH_ABBREVIATION YEAR
+  month: month
+  months: months
+  year: year
+  years: years
+  present: present
+  to: –
+  abbreviations_for_months:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - June
+    - July
+    - Aug
+    - Sept
+    - Oct
+    - Nov
+    - Dec
+  full_names_of_months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+rendercv_settings:
+  date: '2025-06-26'
+  render_command:
+  bold_keywords: [ ]

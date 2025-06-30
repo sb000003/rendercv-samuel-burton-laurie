@@ -29,7 +29,7 @@ cv:
           - Recently working on a complete overhaul of the wider group’s infrastructure. Creating new services to replace old monolithic ones and provide a more stable and easy to modify platform.
           - New event driven Kafka services load tested with k6 to consume 50000 messages/min.
       - company: FINASTRA – Financial Messaging System
-        position: Java Developer
+        position: Software Developer
         date:
         start_date: 2021-07
         end_date: 2023-03
@@ -40,7 +40,7 @@ cv:
           - Working in an Agile environment and adhering to Agile principles and practices. Taking part in and providing constructive updates to daily scrums, sprint retrospectives and sprint planning. Using Jira for issue tracking and confluence for documentation. Also using Jenkins, Maven and SVN for a continuous integration pipeline allowing fast paced development, testing and delivery to customer test environments.
           - Designing and implementing a spring boot REST microservice to run in a docker container.  I worked on re-designing an existing part of the application to run with spring boot to gather data from a no-SQL database and provide that back to the requestor using a REST API.
       - company: ATOS – OPTICA Account (Police case working system)
-        position: Java Developer
+        position: Software Developer
         date:
         start_date: 2017-09
         end_date: 2021-07

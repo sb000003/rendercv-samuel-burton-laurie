@@ -12,7 +12,7 @@ cv:
       - Experienced software developer, with a BSc in Digital and Technology Solutions and 13 years’ experience in the industry across multiple sectors, including finance, government and sports betting. Taking on the senior role and (re)designing and implementing services from scratch. Passionate about software, I spend my free time working on projects at home.
 
     Tools & Technologies:
-      - Kotlin, Java, Kubernetes, AWS Lambda, AWS Dynamo, AWS SNS, k6, Cucumber, JavaScript, Spring Boot, Jenkins, ArgoCD, Gradle, Maven, Git, Intellij IDE, MYSQL, Netty, Apache Solr, Apache Tomcat, Apache Kafka, RedHat JBOSS Wildfly, Ingres, Vagrant, Terraform, AWS CDK, Linux.
+      - Kotlin, Java, React, Kubernetes, AWS Lambda, AWS Dynamo, AWS SNS, k6, Cucumber, JavaScript, Spring Boot, Jenkins, ArgoCD, Gradle, Maven, Git, Intellij IDE, MYSQL, Netty, Apache Solr, Apache Tomcat, Apache Kafka, RedHat JBOSS Wildfly, Ingres, Vagrant, Terraform, AWS CDK, Linux.
     experience:
       - company: Sky Betting & Gaming - Soccer Models
         position: Software Engineer
@@ -23,6 +23,7 @@ cv:
         summary:
         highlights:
           - Kotlin based, Spring Boot microservices deploying to Kubernetes using delivery platform ArgoCD. Utilising AWS services like Dynamo to store data, SNS for handling flows of data and Lambda to process that data. Also JavaScript development for Web based integrations to our backend services.
+          - React UI front end development transforming their frontend to backend microservice transition
           - Worked with Quantitative Analysts to provide pricing logic for their soccer platform in the first 2 years. This involved implementing mathematical models in Kotlin using statistical data from third party providers in order to provide pricing data to the front end Sky Bet mobile app/website as well as their in-house team of traders who manage fixtures, markets and selections with the data we provide.
           - Designed & Implemented a platform for a multi-bet builder PCB (Packaged Created Bets), that is driving £120m+ in stakes.
           - The system is a high throughput, low latency event driven one. Consuming 2000 messages/min and processing in 150ms.

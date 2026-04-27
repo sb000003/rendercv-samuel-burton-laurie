@@ -30,7 +30,7 @@ cv:
           - New event driven Kafka services load tested with k6 to consume 50000 messages/min.
           - Mentoring multiple associate/mid level engineers in engineering best practices and our SDLC processes.
       - company: FINASTRA – Financial Messaging System
-        position: Java Developer
+        position: Software Developer
         date:
         start_date: 2021-07
         end_date: 2023-03

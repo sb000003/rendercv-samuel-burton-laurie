@@ -69,6 +69,28 @@ RenderCV comes with a JSON Schema so that the YAML input file can be filled out 
 
 RenderCV engine is very easy to install (`pip install "rendercv[full]"`) and easy to use (`rendercv new "John Doe"`). Follow the [user guide](https://docs.rendercv.com/user_guide) to get started.
 
+## Generate a CV from YAML with Python
+
+You can render a CV directly with Python (instead of calling the `rendercv` executable) by using module mode:
+
+```bash
+python -m rendercv render "path/to/Your_CV.yaml"
+```
+
+For this repository, for example:
+
+```bash
+python -m rendercv render "samuel-burton-laurie-cv/Samuel_Burton-Laurie_CV_C#.yaml"
+```
+
+The output files are written to `rendercv_output/` by default (PDF, Typst, Markdown, and optionally HTML/PNG).
+
+To choose a custom output folder:
+
+```bash
+python -m rendercv render "path/to/Your_CV.yaml" --output-folder-name "my_cv_output"
+```
+
 ## Motivation
 
 We are developing a [purpose-built app](https://rendercv.com) for writing CVs and resumes that will be available on mobile and web. This Python project is the foundation of that app. Check out [our blog post](https://rendercv.com/introducing-rendercv/) to learn more about why one would use such an app.
